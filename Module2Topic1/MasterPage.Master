@@ -1,0 +1,32 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="Module2Topic1.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Master Page</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+  <div class="navbar">
+        <ul>
+            <li><a href="Exercise1.aspx">Exercise 1</a></li>
+            <li><a href="Exercise2.aspx">Exercise 2</a></li>
+            <li><a href="Exercise3.aspx">Exercise 3</a></li>
+            <li><a href="Exercise4.aspx">Exercise 4</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+
+    <footer>
+        Copyright John Wilbert Laiño <%: DateTime.Now.Year %>
+    </footer>
+    </form>
+</body>
+</html>
