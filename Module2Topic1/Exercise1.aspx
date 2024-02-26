@@ -13,18 +13,27 @@
     <form runat="server">
         <%-- TODO 2.1 Create a label displaying the name of your favorite song and its artist (e.g. Yesterday - The Beatles)--%>
         <%-- Hint: https://www.tutorialspoint.com/asp.net/asp.net_custom_controls.htm#:~:text=Label --%>
+        <asp:Label ID="lblfavSong" runat="server" Text=" pink - wave to earth"></asp:Label>
 
         <%-- TODO 2.2 Create an image that is 200px by 200x big showing the album cover of your favorite song. Make sure to set the alternative text. --%>
         <%-- Hint: https://www.tutorialspoint.com/asp.net/asp.net_basic_controls.htm#:~:text=Image%20Control --%>
+        <asp:Image ID="imgSongCover" runat="server" AlternateText=" Favorite Song " ImageUrl="https://i.scdn.co/image/ab67616d0000b273c21555708975ad94b1faf422" Width="200px" Height="200px" />
 
         <%-- TODO 2.3 Create three buttons with texts. "Prev", "Play", and "Next" --%>
         <%-- Hint: https://www.tutorialspoint.com/asp.net/asp.net_basic_controls.htm#:~:text=Button%20Controls --%>
+        <asp:Button ID="btnPrev" runat="server" Text="Prev" />
+        <asp:Button ID="btnPlay" runat="server" Text="Play" />
+        <asp:Button ID="btnNext" runat="server" Text="Next" />
+
 
         <%-- TODO 2.4 Create a span. Once the play button is pressed, the span should display "Now playing <favorite song>" --%>
         <%-- Hint: https://www.tutorialspoint.com/asp.net/asp.net_event_handling.htm#:~:text=onclick=%22btnclick_Click%22 --%>
+        <p><span id="spanFavSong" runat="server"></span></p>
 
         <%-- TODO 2.5 Display the current time using the template syntax <%= %> --%>
         <%-- Hint: https://learn.microsoft.com/en-us/troubleshoot/developer/webapps/aspnet/development/inline-expressions#:~:text=displays%20the%20current%20time --%>
+        Current Time: <%= DateTime.Now.ToString("HH:mm:ss") %>
+
     </form>
 </body>
 </html>

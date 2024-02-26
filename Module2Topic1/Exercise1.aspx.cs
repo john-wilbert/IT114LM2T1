@@ -13,5 +13,11 @@ namespace Module1Exercise1
         {
 
         }
+
+        protected void btnPlay_Click(object sender, EventArgs e)
+        {
+            string songTitle = "pink - wave to earth";
+            spanFavSong.InnerText = "Now Playing " + songTitle;
+        }
     }
 }
