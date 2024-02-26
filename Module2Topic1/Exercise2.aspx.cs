@@ -13,5 +13,21 @@ namespace Module1Exercise1
         {
 
         }
+
+        protected void btnSubmit_Click(object sender, EventArgs e)
+        {
+            if (paymentProof.HasFile)
+            {
+                string fileExtension = System.IO.Path.GetExtension(paymentProof.FileName);
+                if (fileExtension.ToLower() == ".jpg" || fileExtension.ToLower() == ".png")
+                {
+                    paymentProof.SaveAs("<c:\\SaveDirectory>" + paymentProof.FileName);
+                }
+                else
+                {
+                    Response.Write("<script>alert('Please upload file having extensions .jpg or .png only.')</script>");
+                }
+            }
+        }
     }
 }
