@@ -10,6 +10,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
+  <h1>Exercises</h1>
   <div class="navbar">
         <ul>
             <li><a href="Exercise1.aspx">Exercise 1</a></li>
